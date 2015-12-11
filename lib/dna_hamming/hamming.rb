@@ -4,7 +4,7 @@ module Hamming
     count_the_distance(pair)
   end
 
-  private
+  module_function
   def self.count_the_distance(pair)
     pair.entries.map(&:chars).inject(:zip).select{|a,b| a!=b}.count
   end
